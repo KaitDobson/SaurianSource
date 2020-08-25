@@ -1,0 +1,75 @@
+@model SaurianSource.Models.SingleThreadWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Saurian Source</title>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <div class = "threads-header-area">
+        <h1><a href = "/threads">Saurian Source</a></h1>
+        <h2>@Model.Thread.Title</h2>
+    </div>
+
+    <div class = "user-info-area">
+        <h1>@Model.LoggedInUser.Name</h1>
+        <form action = "/logout" method = "post">
+            <input type = "hidden" name = "userId" value = "@Model.LoggedInUser.UserId" />
+            <button>Logout</button>
+        </form>
+    </div>
+
+     @{
+        @if (@ViewBag.Error != null)
+        {
+            <div class = "error-box">
+                <span>@ViewBag.Error</span>
+            </div>
+        }
+    }
+
+    <div class = "messages-area">
+        @{
+            @foreach(var message in @Model.Thread.Messages)
+            {
+                <div class = "message-row">
+                   <div class = "posted-by-user-area">
+                        <h4><a href = "/user/@message.User.UserId">@message.User.Name</a></h4>
+                        <img class = "user-avatar" src= "@Url.Content(message.User.AvatarUrl)" alt="User Avatar" />
+                        <h5>Posts: @message.User.Messages.Count</h5>
+                   </div>
+
+                   <div class = "message-body-area">
+                       <span class = "message-date">@message.CreatedAt</span>
+                       <p>@Html.Raw(@message.Text)</p>
+                   </div>
+                </div>
+            }
+        }
+
+        <div class = "new-reply-area">
+            <h2>Add Reply:</h2>
+            <form action = "/postmessage" method = "post">
+                <input type = "hidden" name = "threadId" value = "@Model.Thread.ThreadId" />
+                <textarea id="summernote" name="newMessageText"></textarea>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote();
+        });
+    </script>
+</body>
+</html>

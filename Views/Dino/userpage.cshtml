@@ -1,0 +1,59 @@
+@model SaurianSource.Models.UserPageWrapper
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Saurian Source</title>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <div class = "threads-header-area">
+        <h1><a href = "/threads">Saurian Source</a></h1>
+        <h2>@Model.DetailUser.Name's Page</h2>
+    </div>
+
+    <div class = "user-info-area">
+        <h1>@Model.LoggedInUser.Name</h1>
+        <form action = "/logout" method = "post">
+            <input type = "hidden" name = "userId" value = "@Model.LoggedInUser.UserId" />
+            <button>Logout</button>
+        </form>
+    </div>
+
+    <div class = "user-detail-area">
+        <div class = "posted-by-user-area">
+            <h4>@Model.DetailUser.Name</h4>
+            <img class = "user-avatar" src= "@Url.Content(@Model.DetailUser.AvatarUrl)" alt="User Avatar" />
+            <h5>Posts: @Model.TotalPostsForDetailUser</h5>
+        </div>
+    </div>
+
+    <div class = "post-detail-area">
+        <div class = "post-details">
+            <h4>Date Registered: @Model.DetailUser.CreatedAt</h4>
+        </div>
+
+        <div class = "last-posts">
+            <h3>Last four posts:</h3>
+            @{
+                @foreach(var message in @Model.DetailUser.Messages)
+                {
+                    <div class = "last-post-detail">
+                        <span><a href = "/thread/@message.Thread.ThreadId">@message.Thread.Title</a></span>
+                        <span>Date Posted: @message.CreatedAt</span>
+                        <p>@Html.Raw(@message.Text)</p>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

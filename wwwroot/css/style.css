@@ -1,0 +1,165 @@
+body {
+    background-color: rgb(99 197 222);
+    
+}
+
+a {
+    color: rgb(159 196 92);
+    font-weight: bold;
+}
+
+button {
+    border-radius: 5px;
+    border-color: rgb(113 122 145);
+    background-color: rgb(244 199 2);
+    color: rgb(113 122 145);
+}
+
+.sign-in-header {
+    margin: auto;
+    width: 35%;
+    margin-top: 35px;
+    color: rgb(255 251 229);
+}
+
+.page-wrapper {
+    position: relative;
+    bottom: 70px;
+}
+
+.register-area {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: rgb(199 42 50);
+    background-color: rgb(255 251 229);
+    color: rgb(67 141 199);
+    max-width: 400px;
+    position: relative;
+    top: 95px;
+    left: 340px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.register-element {
+    padding: 15px;
+}
+
+.login-area {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: rgb(199 42 50);
+    background-color: rgb(255 251 229);
+    color: rgb(67 141 199);
+    max-width: 400px;
+    position: relative;
+    float: right;
+    right: 400px;
+    bottom: 270px;
+    padding: 10px;
+}
+
+.login-element {
+    padding: 15px;
+}
+
+.header-area {
+    color: rgb(67 141 199);
+    background-color: rgb(255 251 229);
+    border-bottom-style: solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.dashboard-area {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: rgb(199 42 50);
+    background-color: rgb(255 251 229);
+    color: rgb(67 141 199);
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    padding: 25px;
+    font-weight: bold;
+}
+
+.dashboard-element {
+    padding: 5px;
+}
+
+.logout-area {
+    margin-top: 10px;   
+    color: rgb(67 141 199);
+    max-width: 115px;
+    position: relative;
+    float: right;   
+    bottom: 75px;
+    padding: 10px;
+}
+
+.detail-area {
+    margin-top: 10px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(199 42 50);
+    background-color: rgb(255 251 229);
+    color: rgb(67 141 199);
+    max-width: 400px;
+    position: relative;
+    left: 600px;
+    padding: 10px;
+}
+
+.create-area {
+    margin-top: 15px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgb(199 42 50);
+    background-color: rgb(255 251 229);
+    color: rgb(67 141 199);
+    max-width: 590px;
+    position: relative;
+    left: 460px;
+    padding: 20px;
+}
+
+.create-box-1 {
+    float: left;
+}
+
+.create-box-2 {
+    position: relative;
+    right: 55px;
+    float: right;
+}
+
+.create-element {
+    padding: 15px;
+}
+
+.duration-selector {
+    position: relative;
+    left: 250px;
+    bottom: 50px;
+}
+
+.activity-button {
+    position: relative;
+    left: 940px;
+    top: 370px;
+    padding: 5px;
+}
+
+.description-box {
+    float: left;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,83 @@
+@model SaurianSource.Models.User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Saurian Source</title>
+    <!-- include libraries(jQuery, bootstrap) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <link rel="stylesheet" href="~/css/style.css"/>
+</head>
+<body>
+    <div class = "header-area">
+        <h1>Saurian Source</h1>
+        <h2>A forum for dinosuar lovers!</h2>
+    </div>
+
+    <div class = "register-area">
+
+            <h1>Register</h1>
+            @{
+                @if (@ViewBag.Error != null)
+                {
+                    <div class = "error-box">
+                        <span>@ViewBag.Error</span>
+                    </div>
+                }
+            }
+
+            <form action="/register" enctype="multipart/form-data" method="post">
+
+                    <div class = "register-element" >
+                        <span asp-validation-for="Name"></span>
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name">
+                    </div>
+
+                    <div class = "register-element" >
+                        <span asp-validation-for="Email"></span>
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email">
+                    </div>
+
+                    <div class = "register-element" >
+                        <span asp-validation-for="Password"></span>
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password">
+                    </div>
+
+                    <div class = "register-element" >
+                        <span asp-validation-for="Confirm"></span>
+                        <label asp-for="Confirm"></label>
+                        <input asp-for="Confirm">
+                    </div>
+
+                    <div class = "register-element">
+                        <label for = "avatar-upload">Upload Avatar (optional)</label>
+                        <input id = "avatar-upload" name = "AvatarFile" type="file">
+                    </div>
+
+                    <div class = "register-element">
+                        <label for = "register-password">Registration Code</label>
+                        <input id = "register-password" type = "password" name = "registerPW" />
+                    </div>
+
+                    <div class = "register-element" >
+                        <input value="Register" type="submit">    
+                    </div>
+                    
+            </form>
+        </div>
+        <div class = "login-button">
+                <a href = "/">
+                    <button>Return to login page</button>
+                </a>
+        </div>
+</body>
+</html>
