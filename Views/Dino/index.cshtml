@@ -12,10 +12,10 @@
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-    @* <link rel="stylesheet" href="~/css/style.css"/> *@
+    <link rel="stylesheet" href="~/css/style.css"/>
 </head>
 <body>
-    <div class = "header-area">
+    <div class = "header-index">
         <h1>Saurian Source</h1>
         <h2>A forum for dinosuar lovers!</h2>
     </div>
@@ -38,13 +38,14 @@
                 </div>
 
                 <div class = "login-element" >
-                    <input value="Submit" type="submit">    
+                    <button>Submit</button>    
                 </div>
             </form>
         </div>
-        <div class = "register-button">
+        <div >
+            <span class = "register-text">Don't have an account?</span>
             <a href = "/register">
-                <button>Register</button>
+                <button class = "register-button">Register</button>
             </a>
         </div>
     </div>

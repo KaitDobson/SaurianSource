@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="~/css/style.css"/>
 </head>
 <body>
-    <div class = "header-area">
+    <div class = "header-register">
         <h1>Saurian Source</h1>
         <h2>A forum for dinosuar lovers!</h2>
     </div>
 
     <div class = "register-area">
 
-            <h1>Register</h1>
+            <h1 class = "register-head" >Register</h1>
             @{
                 @if (@ViewBag.Error != null)
                 {
@@ -69,14 +69,14 @@
                     </div>
 
                     <div class = "register-element" >
-                        <input value="Register" type="submit">    
+                        <button>Register</button>    
                     </div>
                     
             </form>
         </div>
-        <div class = "login-button">
+        <div>
                 <a href = "/">
-                    <button>Return to login page</button>
+                    <button class = "login-page-button">Return to login page</button>
                 </a>
         </div>
 </body>

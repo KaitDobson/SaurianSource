@@ -20,7 +20,7 @@
         <h2>@Model.Thread.Title</h2>
     </div>
 
-    <div class = "user-info-area">
+    <div class = "logged-in-user-info-area">
         <h1>@Model.LoggedInUser.Name</h1>
         <form action = "/logout" method = "post">
             <input type = "hidden" name = "userId" value = "@Model.LoggedInUser.UserId" />
@@ -42,7 +42,7 @@
             @foreach(var message in @Model.Thread.Messages)
             {
                 <div class = "message-row">
-                   <div class = "posted-by-user-area">
+                   <div class = "thread-posted-by-user">
                         <h4><a href = "/user/@message.User.UserId">@message.User.Name</a></h4>
                         <img class = "user-avatar" src= "@Url.Content(message.User.AvatarUrl)" alt="User Avatar" />
                         <h5>Posts: @message.User.Messages.Count</h5>

@@ -1,18 +1,43 @@
+html {
+    height: 100%;
+   
+}
+
 body {
-    background-color: rgb(99 197 222);
-    
+    background-color: rgb(69 108 99);
 }
 
 a {
-    color: rgb(159 196 92);
+    color: rgb(88 159 184);
     font-weight: bold;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 50%;
 }
 
 button {
     border-radius: 5px;
-    border-color: rgb(113 122 145);
-    background-color: rgb(244 199 2);
-    color: rgb(113 122 145);
+    border-color: rgb(69 108 99);
+    background-color: rgb(120 147 81);
+    color: rgb(222 198 124);
+    font-weight: bold;
+}
+
+.header-index {
+    color: rgb(67 141 199);
+    background-color: rgb(233 220 201);
+    border-color: rgb(210 159 97);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 400px;
+    position: relative;
+    left: 620px;
+    top: 100px;
+    text-align: center;
 }
 
 .sign-in-header {
@@ -22,56 +47,92 @@ button {
     color: rgb(255 251 229);
 }
 
+.register-text {
+    font-weight: bold;
+    color: rgb(233 220 201);
+    position: relative;
+    left: 675px;
+    top: 215px;
+}
+
+.register-button {
+    position: relative;
+    left: 695px;
+    top: 215px;
+}
+
 .page-wrapper {
     position: relative;
     bottom: 70px;
 }
 
-.register-area {
+.header-register {
+    color: rgb(67 141 199);
+    background-color: rgb(233 220 201);
+    border-color: rgb(210 159 97);
     border-style: solid;
     border-width: 5px;
     border-radius: 10px;
-    border-color: rgb(199 42 50);
-    background-color: rgb(255 251 229);
-    color: rgb(67 141 199);
+    padding: 5px;
     max-width: 400px;
     position: relative;
-    top: 95px;
-    left: 340px;
+    left: 600px;
+    top: 40px;
+    text-align: center;
+}
+
+.register-area {
+    color: rgb(67 141 199);
+    background-color: rgb(233 220 201);
+    border-color: rgb(210 159 97);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    max-width: 400px;
+    position: relative;
+    top: 40px;
+    left: 600px;
     margin-top: 20px;
     padding: 10px;
+}
+
+.register-head {
+    text-align: center;
 }
 
 .register-element {
     padding: 15px;
 }
 
+.error-box {
+
+}
+
 .login-area {
+    color: rgb(67 141 199);
+    background-color: rgb(233 220 201);
+    border-color: rgb(210 159 97);
     border-style: solid;
     border-width: 5px;
     border-radius: 10px;
-    border-color: rgb(199 42 50);
-    background-color: rgb(255 251 229);
-    color: rgb(67 141 199);
     max-width: 400px;
     position: relative;
-    float: right;
-    right: 400px;
-    bottom: 270px;
+    left: 620px;
+    top: 200px;
     padding: 10px;
+    text-align: center;
 }
 
 .login-element {
     padding: 15px;
 }
 
-.header-area {
-    color: rgb(67 141 199);
-    background-color: rgb(255 251 229);
-    border-bottom-style: solid;
-    border-radius: 10px;
-    padding: 5px;
+.login-page-button {
+    position: relative;
+    left: 815px;
+    bottom: 15px;
 }
+
 
 .dashboard-area {
     border-style: solid;
@@ -162,4 +223,153 @@ button {
 .user-avatar {
     width: 100px;
     height: 100px;
+    max-width: 100%;
+}
+
+.threads-header-area {
+    color: rgb(67 141 199);
+    background-color: rgb(233 220 201);
+    border-color: rgb(210 159 97);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 600px;
+    position: relative;
+    left: 520px;
+    top: 40px;
+    text-align: center;
+}
+
+.user-info-area {
+    color: rgb(69 108 99);
+    background-color: rgb(210 159 97);
+    border-color: rgb(228 202 162);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 300px;
+    position: relative;
+    left: 20px;
+    top: 70px;
+    text-align: center;
+}
+
+.main-thread-area {
+    border-radius: 10px;
+    color: rgb(69 108 99);
+    background-color: rgb(222 198 124);
+    max-width: 500px;
+    padding: 15px;
+    position: relative;
+    left: 570px;
+    bottom: 60px;
+}
+
+.create-new-thread {
+
+}
+
+.thread-row {
+
+}
+
+.thread-title {
+
+}
+
+.thread-info-area {
+
+}
+
+.logged-in-user-info-area {
+    color: rgb(69 108 99);
+    background-color: rgb(210 159 97);
+    border-color: rgb(228 202 162);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 300px;
+    position: relative;
+    left: 20px;
+    bottom: 85px;
+    text-align: center;
+}
+
+.profile-detail-area {
+    background-color: rgb(233 220 201);
+    border-color: rgb(210 159 97);
+    border-style: solid;
+    border-radius: 10px;
+    border-top-style: solid;
+    border-width: 10px;
+    max-width: 280px;
+    position: relative;
+    left: 170px;
+}
+
+.post-detail-area {
+    background-color: rgb(233 220 201);
+    text-align: center;
+    padding: 10px;
+    color: rgb(120 147 81);
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    float: right;
+    right: 240px;
+    bottom: 195px;
+}
+
+.posted-by-user-area {
+    margin: auto;
+    width: 40%;
+    color: rgb(88 159 184);
+}
+
+.post-text {
+    color: rgb(69 108 99);
+}
+
+.thread-posted-by-user {
+
+}
+
+.new-reply-area {
+    margin: auto;
+    width: 40%;
+    color: rgb(88 159 184);
+}
+
+.messages-area  {
+    padding: 10px;
+    border-top-style: solid;
+    border-width: 8px;
+    border-color: rgb(210 159 97);
+    background-color: rgb(233 220 201);
+}
+
+.message-body-area {
+    position: relative;
+    left: 125px;
+    bottom: 160px;
+}
+
+.message-row {
+    border-bottom-style: solid;
+    border-width: 8px;
+    border-color: rgb(210 159 97);
+}
+
+.create-thread-area {
+    margin: auto;
+    width: 50%;
+    color: rgb(88 159 184);
+    background-color: rgb(228 202 162);
+    padding: 25px;
+    border-radius: 10px;
+    position: relative;
+    left: 25px;
 }

@@ -20,7 +20,7 @@
         <h2>@Model.DetailUser.Name's Page</h2>
     </div>
 
-    <div class = "user-info-area">
+    <div class = "logged-in-user-info-area">
         <h1>@Model.LoggedInUser.Name</h1>
         <form action = "/logout" method = "post">
             <input type = "hidden" name = "userId" value = "@Model.LoggedInUser.UserId" />
@@ -28,7 +28,7 @@
         </form>
     </div>
 
-    <div class = "user-detail-area">
+    <div class = "profile-detail-area">
         <div class = "posted-by-user-area">
             <h4>@Model.DetailUser.Name</h4>
             <img class = "user-avatar" src= "@Url.Content(@Model.DetailUser.AvatarUrl)" alt="User Avatar" />
@@ -49,7 +49,7 @@
                     <div class = "last-post-detail">
                         <span><a href = "/thread/@message.Thread.ThreadId">@message.Thread.Title</a></span>
                         <span>Date Posted: @message.CreatedAt</span>
-                        <p>@Html.Raw(@message.Text)</p>
+                        <p class = "post-text">@Html.Raw(@message.Text)</p>
                     </div>
                 }
             }
